@@ -1,0 +1,35 @@
+body{
+    background-color:#87cefa;
+    font-family: sans-serif; 
+}
+
+p{
+    font-size: 20px;
+    color:darkolivegreen;
+    background-color: rgb(140, 250, 23);
+    padding: 10px;
+    margin:30px;
+}
+
+.special{
+    border: 10px groove #33825d;
+    padding:30px;
+    background-color:#97d5fc;
+    text-align: center;
+    color:rgb(59, 78, 26)
+}
+
+h1{
+    font-size: 50px;
+    font-weight: normal;
+    font-style:italic;
+}
+
+.once{
+    border: 5px dashed #ffff00;
+    padding: 10px;
+}
+
+img{
+    max-width: 100%;
+}
