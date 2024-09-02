@@ -1,0 +1,14 @@
+html{
+    min-height: 100%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+body{
+   background-image: linear-gradient( #bbe6ac, #8ab674);
+   
+}
+
+h1{
+    text-align: center;
+}
+
