@@ -1,5 +1,14 @@
+body{
+    background-color: beige;
+}
+
 h1{
     text-align:center;
+}
+
+hr{
+    border-color: rgb(0, 0, 0);
+    width: 75%;
 }
 
 h2{
@@ -7,6 +16,7 @@ h2{
 }
 
 p{
-    padding-right: 100px;
-    padding-left: 80px;
+    padding-right: 160px;
+    padding-left: 160px;
+    margin: 20px;
 }
