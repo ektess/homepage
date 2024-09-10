@@ -5,15 +5,16 @@
 body{
     min-height:100vh;
     min-width:100vh;
-    background-color: rgb(245, 230, 224);  
+    background-color: #f5e0e5;
+    cursor: url("Arrow.cur") auto;
 }
 
 .header{
     height:fit-content;
-    border: 8px double #c87c7c;
+    border: 8px double #5b3499;
     border-radius: 13px;
     padding:10px 70px;
-    background: #fffcfc;
+    background: #f4e6ea;
     position:absolute;
     top: 50%; /* Position Y halfway in */
     left: 50%; /* Position X halfway in */
@@ -40,31 +41,54 @@ body{
 
 h1{
     text-align: center;
-    color:#c87c7c;
+    color:#5b3499;
 }
 
 .bodybox{
-    background:rgb(205, 88, 34);
+    background:#9466b9;
     padding:20px;
     margin:10px;
     width:80%;
     margin-left: auto;
     margin-right:auto;
+    margin-top: 30px;
     border-radius: 20px;
 }
 
 .para{
-    background:#fffcfc;
-    border: 2px double orangered;
+    background:#f4e6ea;
+    border: 10px double #8570a7;
     border-radius: 13px;
-    padding:5px 70px;
+    padding:8px 75px;
     width:75%;
     margin-left: auto;
     margin-right: auto;
-    margin-top:10px;
-    margin-bottom:10px;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+.knot-parent{
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.knot-type{
+    width:25%;
+    text-align: center;
+    font-weight: bold;
+    margin: 5px;
+    padding:10px 4px;
+    background-color: rgba(255, 255, 255, 0.428);
+    /*border: 1px solid rgb(186, 186, 186);*/
+    border-radius: 5px;
+}
+
+.knotimage{
+    width:90%;
 }
 
 img{
     max-width: 100%;
 }
+
+
