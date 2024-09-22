@@ -27,7 +27,7 @@ hr{
 .entry{
     border:2px dashed black;
     margin:10px;
-    padding: 10px;
+    padding: 30px;
     border-radius: 100px;
     width:90%;
     justify-content: center;
@@ -38,7 +38,5 @@ h2{
 }
 
 p{
-    padding-right: 160px;
-    padding-left: 160px;
     margin: 20px;
 }
