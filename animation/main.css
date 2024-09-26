@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+  } 
+
+img{
+    max-width: 100%;
+}
+
+body{
+  margin:0px;
+}
+
+.container{
+  background: lightpink;
+  height:100vh;
+  display:flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position:relative;
+  overflow:hidden;
+}
+
+.circle{
+  background: lavender;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  /*animation-name: pulse;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;*/
+  animation: pulse 4s 2s infinite alternate ease-in-out both;
+}
+
+@keyframes pulse{
+  0% {
+    background: lavender;
+    transform: scale(1);
+    filter:blur(0);
+  }
+  100%{
+    background: indigo;
+    transform: scale(2);
+    filter:blur(10px);
+  }
+}
+
+.square{
+  background: lavender;
+  width: 15vw;
+  height: 15vw;
+  animation: spin 4s infinite linear;
+}
+
+@keyframes spin{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.mover{
+  background-color: mediumvioletred;
+  width: 100px;
+  height: 25px;
+  position:absolute;
+  bottom:0;
+  left:0;
+  animation:move 4s infinite;
+}
+
+@keyframes move{
+  0%{
+    transform: translateX(-100px) rotate(0deg);
+  }
+
+  45%{
+    transform: rotate(0);
+  }
+
+  50%{
+    transform: rotate(180deg); 
+  }
+  100%{
+  transform: rotate (180deg);
+  left: 100vw;
+  }
+}
