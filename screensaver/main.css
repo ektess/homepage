@@ -111,7 +111,7 @@ img{
 
 .a{
   left:3%;
-  top:0%;
+  top:0vh;
   animation-delay: 468ms;
 }
 
@@ -247,7 +247,112 @@ img{
   50%{
     background: #00000000;
   }
-  100%{
+  75%{
     background: white;
   }
+}
+
+.ghost{
+  position:absolute;
+  right:29vw;
+  top:9vh;
+  animation: ghost-move 5s linear infinite forwards;
+}
+
+@keyframes ghost-move{
+ 0%{
+  transform: translate(0,0vh);
+ }
+ 25%{
+  transform: translate(20vw,0vh);
+ }
+ 50%{
+  transform: translate(20vw,10vh);
+ }
+
+ 75%{
+  transform: translate(0vw,10vh);
+ }
+
+ 100%{
+  transform: translate(0vw, 0vh);
+ }
+}
+
+.g-body{
+width:10vw;
+  height:10vw;
+  background-color: orange;
+  border-radius:50% 50% 0 0;
+}
+
+.ball{
+  position:absolute;
+  border-radius: 50%;
+  top:91%;
+  width:2vw;
+  height:1.75vw;
+}
+
+.or{
+  background-color: orange;
+}
+
+.bl{
+  background-color: #000;
+}
+
+.b1{
+  left:20%;
+}
+
+.b2{
+  left:40%
+}
+
+.b3{
+  left:60%;
+}
+
+.b4{
+  right:0%;
+}
+
+
+.eye{
+  width:2.5vw;
+  height:2.7vw;
+  border-radius: 50%;
+  background:white;
+}
+
+.pupil{
+  width:1.5vw;
+  height:1.5vw;
+  border-radius: 50%;
+  background:blue;
+}
+
+.lefteye{
+  right:2%;
+  top:27%;
+  position:absolute;
+}
+
+.leftp{
+  position: absolute;
+  right:2%;
+  top:32%;
+}
+
+.righteye{
+  right:45%;
+  top:27%;
+  position:absolute;
+}
+
+.rightp{
+  position: absolute;
+  right:2%;
+  top:32%;
 }
