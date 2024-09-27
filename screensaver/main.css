@@ -259,6 +259,10 @@ img{
   animation: ghost-move 5s linear infinite forwards;
 }
 
+.ghost:hover .or{
+    background-color:blue;
+}
+
 @keyframes ghost-move{
  0%{
   transform: translate(0,0vh);
@@ -282,7 +286,6 @@ img{
 .g-body{
 width:10vw;
   height:10vw;
-  background-color: orange;
   border-radius:50% 50% 0 0;
 }
 
@@ -296,7 +299,9 @@ width:10vw;
 
 .or{
   background-color: orange;
+  transition: background-color 1s;
 }
+
 
 .bl{
   background-color: #000;
