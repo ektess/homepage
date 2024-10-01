@@ -43,15 +43,15 @@ img{
   }
 
   45%{
-    transform:translate(40vw, 50vh) rotate(90deg);
+    transform:translate(40vw, 58vh) rotate(90deg);
   }
 
   55%{
-    transform:translate(40vw, 50vh) rotate(0deg);
+    transform:translate(40vw, 58vh) rotate(0deg);
   }
 
   97%{
-    transform:translate(110vw, 50vh);
+    transform:translate(110vw, 58vh);
   }
 
   98%{
@@ -93,10 +93,7 @@ img{
 }
 
 .dotcontainer{
-  position:relative;
   display: flex;
-  width:100vw;
-  height:100vh;
 }
 
 .dot{
@@ -111,129 +108,124 @@ img{
 
 .a{
   left:3%;
-  top:0vh;
+  top:18%;
   animation-delay: 468ms;
 }
 
 .b{
   left: 9%;
-  top: 0%;
+  top: 18%;
   animation-delay: 677ms;
 }
 
 .c{
   left: 15%;
-  top: 0%;
+  top: 18%;
   animation-delay: 932ms;
 }
 
 .d{
   left: 21%;
-  top: 0%;
+  top: 18%;
   animation-delay: 1155ms;
 }
 
 .e{
   left: 27%;
-  top: 0%;
+  top: 18%;
   animation-delay: 1406ms;
 }
 
 .f{
   left: 33%;
-  top: 0%;
+  top: 18%;
   animation-delay: 1652ms;
 }
 
 .g{
   left: 39%;
-  top: 0%;
+  top: 18%;
   animation-delay: 1900ms;
 }
 
 .h{
   left: 45%;
-  top: 0%;
+  top: 18%;
   animation-delay: 2149ms;
 }
 
 .i{
   left: 45%;
-  top: 10%;
+  top: 30.25%;
   animation-delay: 3047ms;
 }
 
 .j{
   left: 45%;
-  top: 20%;
+  top: 42.5%;
   animation-delay: 3302ms;
 }
 
 .k{
   left: 45%;
-  top: 30%;
+  top: 54.75%;
   animation-delay: 3647ms;
 }
 
 .l{
   left: 45%;
-  top: 40%;
+  top: 67%;
   animation-delay: 4021ms;
 }
 
 .m{
   left: 51%;
-  top: 40%;
+  top: 67%;
   animation-delay: 5456ms;
 }
 
 .n{
   left: 57%;
-  top: 40%;
+  top: 67%;
   animation-delay: 5769ms;
 }
 
 .o{
   left: 63%;
-  top: 40%;
+  top: 67%;
   animation-delay: 6129ms;
 }
 
 .p{
   left: 69%;
-  top: 40%;
+  top: 67%;
   animation-delay: 6479ms;
 }
 
 .q{
   left: 75%;
-  top: 40%;
+  top: 67%;
   animation-delay: 6833ms;
 }
 
 .r{
   left: 81%;
-  top: 40%;
+  top: 67%;
   animation-delay: 7176ms;
 }
 
 .s{
   left: 87%;
-  top: 40%;
+  top: 67%;
   animation-delay: 7574ms;
 }
 
 .t{
   left: 93%;
-  top: 40%;
+  top: 67%;
   animation-delay: 7930ms;
 }
 
-.u{
-  left: 99%;
-  top: 40%;
-  animation-delay: 8281ms;
-}
 
 @keyframes dot-eat {
   0%{
@@ -254,33 +246,78 @@ img{
 
 .ghost{
   position:absolute;
+}
+
+.tr{
   right:29vw;
   top:9vh;
-  animation: ghost-move 5s linear infinite forwards;
+  animation: ghost-move-right 5s linear infinite forwards;
+}
+
+@keyframes ghost-move-right{
+  0%{
+   transform: translate(0,0vh);
+  }
+  25%{
+   transform: translate(20vw,0vh);
+  }
+  50%{
+   transform: translate(20vw,10vh);
+  }
+ 
+  75%{
+   transform: translate(0vw,10vh);
+  }
+ 
+  100%{
+   transform: translate(0vw, 0vh);
+  }
+ }
+
+
+.or{
+  background-color: orange;
+  transition: background-color 1s;
 }
 
 .ghost:hover .or{
-    background-color:blue;
+  background-color:blue;
 }
 
-@keyframes ghost-move{
- 0%{
-  transform: translate(0,0vh);
- }
- 25%{
-  transform: translate(20vw,0vh);
- }
- 50%{
-  transform: translate(20vw,10vh);
+.blt{
+ left:6%;
+ top: 44%;
+ animation: ghost-move-left 4s linear -2s infinite forwards;
+}
+
+@keyframes ghost-move-left{
+  0%{
+   transform: translate(0,0vh);
+  }
+
+  25%{
+   transform: translate(0vw,15vh);
+  }
+  50%{
+   transform: translate(15vw,15vh);
+  }
+ 
+  75%{
+   transform: translate(15vw,0vh);
+  }
+ 
+  100%{
+   transform: translate(0vw, 0vh);
+  }
  }
 
- 75%{
-  transform: translate(0vw,10vh);
- }
+.pi{
+  background-color: pink;
+  transition: background-color 1s;
+}
 
- 100%{
-  transform: translate(0vw, 0vh);
- }
+.ghost:hover .pi{
+  background-color:blue;
 }
 
 .g-body{
@@ -296,12 +333,6 @@ width:10vw;
   width:2vw;
   height:1.75vw;
 }
-
-.or{
-  background-color: orange;
-  transition: background-color 1s;
-}
-
 
 .bl{
   background-color: #000;
@@ -339,7 +370,7 @@ width:10vw;
 }
 
 .lefteye{
-  right:2%;
+  right:6%;
   top:27%;
   position:absolute;
 }
@@ -360,4 +391,63 @@ width:10vw;
   position: absolute;
   right:2%;
   top:32%;
+}
+
+.maze{
+position:absolute;
+width:100vw;
+height:100vh;
+display: flex;
+}
+
+.border{
+  border: 12px solid blue;
+  background: #000;
+  position:absolute;
+}
+
+.bottom{
+  bottom:10%;
+  width:90%;
+  justify-content: center;
+  height:4vw;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 200px;
+}
+
+.bottomup{
+  width:4vw;
+  height:52vh;
+  left:32%;
+  bottom:97%;
+  border-radius: 100px 100px 0 0;
+  border-color: blue blue black blue;
+}
+
+.leftwall{
+  height:4vw;
+  width: 26%;
+  left:5%;
+  top:32%;
+  border-radius: 200px;
+}
+
+.rightroof{
+  height:4vw;
+  width:42%;
+  right:5%;
+  top:48%;
+  border-radius: 0 100px 100px 100px;
+}
+
+.rightwall{
+  width:4vw;
+  height:1000%;
+  left: -2%;
+  bottom:97%;
+  border-color: blue blue black blue;
+  border-radius: 100px 100px 0px 0px;
+
+
 }
