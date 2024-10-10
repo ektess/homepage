@@ -422,7 +422,7 @@ display: flex;
   left:32%;
   bottom:97%;
   border-radius: 100px 100px 0 0;
-  border-color: blue blue black blue;
+  border-color: blue blue rgba(0, 0, 0, 0) blue;
 }
 
 .leftwall{
@@ -446,7 +446,7 @@ display: flex;
   height:1000%;
   left: -2%;
   bottom:97%;
-  border-color: blue blue black blue;
+  border-color: blue blue rgba(0, 0, 0, 0) blue;
   border-radius: 100px 100px 0px 0px;
 
 

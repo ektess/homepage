@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+  } 
+
+img{
+    max-width: 100%;
+}
+
+
+@font-face {
+  font-family: 'losta reg';
+  src: url('lostafrida-regular_copy-webfont.woff2') format('woff2'),
+       url('lostafrida-regular_copy-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'losta reg';
+  src: url('lostafrida-black_copy-webfont.woff2') format('woff2'),
+       url('lostafrida-black_copy-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+
+}
+
+body{
+  background-color: rgb(189, 157, 225);
+  font-family: "Inria Serif", serif;
+}
+
+h1{
+  font-family: "Afacad Flux", sans-serif;
+}
+
+.special{
+  font-family: "losta reg", serif;
+}
