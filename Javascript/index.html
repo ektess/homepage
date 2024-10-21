@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascript excercise</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+
+        <button onclick="menuOpen()">Toggle Menu</button>
+        <button onclick="glow()">Glow</button>
+
+        <div class="menu">
+            Hello World!
+          </div>
+
+          <div class="gear"></div>
+
+        <script>
+            var menu = document.querySelector(".menu");
+            var gear = document.querySelector(".gear");
+
+            function menuOpen() {
+              console.log(':3');
+              menu.classList.toggle("active");
+              document.body.classList.toggle("dark");
+              gear.classList.toggle("spin");
+            }
+
+            function glow(){
+                console.log('glow button clicked');
+                gear.classList.toggle("glow");
+                menu.classList.toggle("glow");
+            }
+            </script>
+
+    </body>
+</html>

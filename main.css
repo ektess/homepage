@@ -16,16 +16,9 @@ h1{
     margin:auto;
     background-color: rgb(233, 253, 222);
     padding:20px;
-    width:30%;
+    width:80%;
     border-radius: 5%;
-    height:300px;
     position: relative;
-}
-
-.what{
-    position: absolute;
-    left:50%;
-    transform: translateX(-50%);
 }
 
 .sites{
