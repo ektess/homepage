@@ -23,7 +23,6 @@ $(".reveal-btn").click(
 $( ".draggable" ).draggable({
     snap:true,
     axis: "x"
-
 });
 
 
