@@ -90,4 +90,31 @@ $(document).ready(function() {
         score--;
         $('.scoreValueB').text(score);
     });
+
+    $('.resetbutton').click(function() {
+        score=0;
+        $('.scoreValueA').text(score);
+        $('.scoreValueB').text(score);
+    });
 });
+
+
+$(".winnerbutton").click(
+    function(){
+        $("#win").css("display", "block");
+        setTimeout(function() {
+            // Second action after 1 second
+            $("#win").css("display", "none");
+          }, 2400); // 1000 milliseconds = 1 second
+    }
+);
+
+$(".loserbutton").click(
+    function(){
+        $("#lose").css("display", "block");
+        setTimeout(function() {
+            // Second action after 1 second
+            $("#lose").css("display", "none");
+          }, 2000); // 1000 milliseconds = 1 second
+    }
+);
