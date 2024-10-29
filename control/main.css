@@ -22,7 +22,7 @@ body.class2{
 }
 
 body.class3{
-  background-color: purple;
+  background-image: url(images/flowerfield-2.jpg);
 }
 
 .topsection{
@@ -43,6 +43,7 @@ body.class3{
     background-color 0.3s;
   display:flex;
   align-items: center;
+  user-select: none;
 }
 
 .winnerbutton:hover, .loserbutton:hover, .themeset:hover{
@@ -92,7 +93,7 @@ span {
 }
 
 .box.class3{
-  background:orange;
+  background:rgb(141, 200, 117);
 }
 
 .scoreboard{
@@ -109,6 +110,19 @@ span {
   background-color: white;
   text-align: center;
   border-radius: 5px;
+}
+
+.incdec{
+  transition:color .25s;
+  user-select: none;
+}
+
+.increaseA:hover, .increaseB:hover{
+  color:green;
+}
+
+.decreaseA:hover, .decreaseB:hover{
+  color:red;
 }
 
 .x{
@@ -193,10 +207,6 @@ span {
 .j{
   top: 69%;
   right: 54px;
-}
-
-.incdec {
-  user-select: none;
 }
 
 

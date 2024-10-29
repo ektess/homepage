@@ -31,7 +31,7 @@ $('.themeset').click(function () {
         } else if (newBodyClass == 'class2') {
             i.src = "images/ghosty.png"; 
         } else if (newBodyClass == 'class3'){
-            i.src = ""
+            i.src = "images/pinkflower.png"
         }
     });
 
@@ -41,7 +41,7 @@ $('.themeset').click(function () {
         } else if (newBodyClass == 'class2') {
             i.src = "images/pumpk.png"; 
         } else if (newBodyClass == 'class3'){
-            i.src = ""
+            i.src = "images/blueflower.png"
         }
     });
 
@@ -88,12 +88,6 @@ $(document).ready(function() {
 
     $('.decreaseB').click(function() {
         score--;
-        $('.scoreValueB').text(score);
-    });
-
-    $('.resetbutton').click(function() {
-        score=0;
-        $('.scoreValueA').text(score);
         $('.scoreValueB').text(score);
     });
 });
