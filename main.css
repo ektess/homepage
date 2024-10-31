@@ -1,27 +1,108 @@
 html{
-    min-height: 100%;
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
 body{
-   background-image: linear-gradient( #bbe6ac, #8ab674);
-   
+   background-image: url(homepage-images/background.png);
+    background-size: cover;  
 }
 
-h1{
-    text-align: center;
+img { 
+    width: 100%;
+    height: auto;
 }
 
-.main{
-    margin:auto;
-    background-color: rgb(233, 253, 222);
-    padding:20px;
-    width:80%;
-    border-radius: 5%;
-    position: relative;
-}
-
-.sites{
+p{
+    color:rgb(81, 45, 113);
+    background-color:white;
     padding:5px;
-    margin:auto;
+    text-align:center;
 }
+
+
+.container{
+    position: absolute;
+}
+
+.title{
+    width:31%;
+    left:20%;
+    top:8%;
+    transform:rotate(-3deg);
+    position:absolute;
+}
+
+.centertext {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    opacity:0;
+    transition: opacity .25s;
+}
+
+.container:hover .centertext{
+    opacity:1;
+}
+
+.penhold{
+    width:41%;
+    top:23vh;
+    left:-3vh;
+}
+
+.pen {
+    transform:rotate(-10deg);
+}
+
+
+.bracelethold1{
+    width:15%;
+    top: 36%;
+    left:24%;
+    z-index:2;
+}
+
+.bracelethold{
+    width:12%;
+    top: 25%;
+    left:36%;
+}
+
+.bracelet{
+    transform:rotate(5deg);
+}
+
+.musichold{
+    width:10%;
+    top: 12%;
+    left:54%;
+}
+
+.tickethold{
+    width:19%;
+    top: 17%;
+    left:65%;
+}
+
+.notehold{
+    width:16%;
+    top:59%;
+    left:32%;
+}
+
+.sheetmusic{
+    transform:rotate(-3deg);
+}
+
+.tichold{
+    width:16%;
+    top:46%;
+    left:66%;
+}
+
+.tictactoe{
+    transform:rotate(10deg);
+}
+
