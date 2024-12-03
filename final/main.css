@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 105%;
+    max-height: 100vh;
+  } 
+
+img{
+    max-width: 100%;
+}
+
+body{
+    background:#F5E645;
+}
+
+.landing{
+    position:fixed;
+    height:100%;
+    width:100%;
+    background:#F5E645;
+    z-index:2;
+    border-radius: 50px;
+    opacity:1;
+    transition:opacity .25s;
+    padding: 0;
+}
+
+.smallland{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: #ED357C;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 60%;
+    width:60%;
+    border-radius: 30px;
+    color:#F0F0F0;
+    border: solid 20px #F0F0F0;
+    font-size: 150%;
+}
+
+
+
+.enterbutton{
+    background:#2B2D42;
+    border-radius: 15px;
+    padding: 30px 40px;
+    transition: background .25s;
+    color: #F0F0F0;
+}
+
+h1{
+    font-size:200%;
+}
+
+.enterbutton:hover{
+    background:#d31058;
+}
+
+.fade{
+    opacity:0;
+}
+
+.gone{
+    display:none;
+}
+
+#keycontainer{
+    background:#F7F7F9;
+    width: 85vw;
+    height: 50vh;
+    padding: 1%;
+    flex-flow: column;
+    display: flex;
+    flex: 4;
+    position:fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+}
+
+#notes{
+    height: 100%;
+    display: flex;
+    flex: 8;
+    justify-content: center;
+}
+
+.key {
+    flex: 1;
+    display: inline-flex;
+    align-items: center; 
+    user-select:none;
+}
+
+.white{
+    background:#E86A92;
+    color:black;
+    margin: 0px 7px;
+    border-radius: 6px;
+    justify-content: center;
+    padding-top:14%;
+    transition: background .25s;
+    color:#2B2D42;
+}
+
+.white:hover{
+    background: #D34C77;
+    color: #D34C77;
+}
+
+.wpressed{
+    background: #fccaca;
+    color: #fccaca;   
+}
+
+.black {
+
+    justify-content: center;
+    position: relative;
+    height: 67%;
+    border-radius:6px;
+    background-color: #2B2D42;
+    color: white;
+    margin: 0 -4%;
+    transition: background .25s;
+}
+
+.black:hover{
+    background:#0C081B;
+    color: #0C081B;
+}
+
+.bpressed{
+    background:#0C081B;
+    color: #0C081B;
+}
+
+.audio-player{
+    display:none;
+}
