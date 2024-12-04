@@ -91,3 +91,20 @@ const keyMap = {
   document.addEventListener('keydown', handleKeyPress);
   document.addEventListener('keyup', handleKeyRelease);
 
+var myAudio = document.getElementById("myAudio");
+
+function togglePlay() {
+  $(".play1").toggleClass("gone");
+  $(".pause1").toggleClass("gone");
+  return myAudio.paused ? myAudio.play() : myAudio.pause();
+};
+
+var audioTwo = document.getElementById("audioTwo");
+
+function secondPlay() {
+  $(".play2").toggleClass("gone");
+  $(".pause2").toggleClass("gone");
+  return myAudio.paused ? myAudio.play() : myAudio.pause();
+};
+
+

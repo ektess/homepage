@@ -12,6 +12,7 @@
                 <p>Click on the keys or use your computer keyboard to play the piano!</p>
                 <div class="enterbutton"> Enter</div>
             </div>
+            <img src="vecteezy_vinyl-record-vector-illustration-isolated-on-white-background_9314135.png" id="vinyl1">
         </div>
         <div id="keycontainer">
             <div id="notes">
@@ -34,6 +35,35 @@
                 <div class="key white he"      >;</div>
                 <div class="key white hf"      >'</div>
             </div>
+        </div>
+
+        <div class="audiocontainer">
+            <div class = "audiohold" onClick="togglePlay()">
+                <div class="play1">&#9658</div>
+                <div class="pause1 gone">&#x23f8;</div>
+            </div>
+            <div class = "audiohold" onClick = "secondPlay()">
+                <div class="play2">&#9658</div>
+                <div class="pause2 gone">&#x23f8;</div>
+            </div>
+            <div class = "audiohold">
+                <div class="play3">&#9658</div>
+                <div class="pause3 gone">&#x23f8;</div>
+            </div>
+            <div class = "audiohold">
+                <div class="play4">&#9658</div>
+                <div class="pause4 gone">&#x23f8;</div>
+            </div>
+        </div>
+
+
+        <div class="gone">
+            <audio
+                src = "lofi-drumbeat_80bpm.mp3" id="myAudio" loop
+            ></audio>
+            <audio loop id="audioTwo">
+                <source src = "hiphopbeat1.mp3">
+            </audio>
         </div>
 
         <script src="audiokeys.min.js"></script>
