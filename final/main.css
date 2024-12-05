@@ -14,14 +14,14 @@ img{
 }
 
 body{
-    background:#6DD3CE;
+    background:#8fe2de;
 }
 
 .landing{
     position:fixed;
     height:100%;
     width:100%;
-    background:#6DD3CE;
+    background:#8fe2de;
     z-index:2;
     opacity:1;
     transition:opacity .25s;
@@ -117,8 +117,10 @@ h1{
     margin: 0px 7px;
     border-radius: 6px;
     justify-content: center;
-    padding-top:14%;
-    transition: background .25s;
+    padding-top:18%;
+    transition: 
+        background .25s,
+        padding-top .2s;
 }
 
 .white:hover{
@@ -205,4 +207,46 @@ h1{
     0%      {transform: rotate(0deg);}
     50%     {transform: rotate(180deg);}
     100%    {transform: rotate(360deg);}
+}
+
+@media screen and (max-width: 1350px){
+    .white{
+        padding-top:23%;
+    }
+    body{
+        font-size:90%;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .white{
+        padding-top:30%;
+    }
+    body{
+        font-size:90%;
+    }
+
+    #keycontainer{
+        height:40vh;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+    .white{
+        padding-top:30%;
+    }
+    body{
+        font-size:85%;
+    }
+
+    #keycontainer{
+        height:30vh;
+    }
+
+    .audiohold{
+        width:50px;
+        height:50px;
+    }
+
 }

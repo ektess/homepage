@@ -2,15 +2,30 @@ html{
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
+*{
+    z-index: 2;
+    overflow:hidden;
+}
+
 body{
-   background-image: url(homepage-images/background.png);
-    background-size: cover;  
+    background-image: url(homepage-images/Texturelabs_Wood_242S.jpg);
 }
 
 img { 
     width: 100%;
     height: auto;
 }
+
+.main{
+    background-image: url(homepage-images/notebook.png);
+    width:90vw;
+    height:95vh; 
+    margin:auto;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 
 p{
     color:rgb(81, 45, 113);
@@ -40,7 +55,9 @@ p{
     font-size: 18px;
     opacity:0;
     transition: opacity .25s;
+    user-select: none;
 }
+
 
 .container:hover .centertext{
     opacity:1;
@@ -75,15 +92,15 @@ p{
 }
 
 .musichold{
-    width:10%;
+    width:8%;
     top: 12%;
     left:54%;
 }
 
 .tickethold{
-    width:19%;
+    width:15%;
     top: 17%;
-    left:65%;
+    left:63%;
 }
 
 .notehold{
@@ -97,12 +114,18 @@ p{
 }
 
 .tichold{
-    width:16%;
-    top:46%;
-    left:66%;
+    width:14%;
+    top:42%;
+    left:63%;
 }
 
 .tictactoe{
     transform:rotate(10deg);
+}
+
+.finalhold{
+    width:12%;
+    top:68%;
+    left:55%;
 }
 
