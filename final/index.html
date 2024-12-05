@@ -6,64 +6,79 @@
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
-        <div class="landing">
-            <div class="smallland">
-                <h1>Keyboard Piano</h1>
-                <p>Click on the keys or use your computer keyboard to play the piano!</p>
-                <div class="enterbutton"> Enter</div>
+        <div class="background">
+            <div class="landing">
+                <div class="smallland">
+                    <h1>Keyboard Piano</h1>
+                    <p>Click on the keys or use your computer keyboard to play the piano!</p>
+                    <div class="enterbutton"> Enter</div>
+                </div>
+                <img src="vecteezy_vinyl-record-vector-illustration-isolated-on-white-background_9314135.png" id="vinyl1">
             </div>
-            <img src="vecteezy_vinyl-record-vector-illustration-isolated-on-white-background_9314135.png" id="vinyl1">
-        </div>
-        <div id="keycontainer">
-            <div id="notes">
-                <div class="key white c"      >A</div>
-                <div class="key black c_sharp">W</div>
-                <div class="key white d"      >S</div>
-                <div class="key black d_sharp">E</div>
-                <div class="key white e"      >D</div>
-                <div class="key white f"      >F</div>
-                <div class="key black f_sharp">T</div>
-                <div class="key white g"      >G</div>
-                <div class="key black g_sharp">Y</div>
-                <div class="key white a"      >H</div>
-                <div class="key black a_sharp">U</div>
-                <div class="key white b"      >J</div>
-                <div class="key white hc"      >K</div>
-                <div class="key black hc_sharp">O</div>
-                <div class="key white hd"      >L</div>
-                <div class="key black hd_sharp">P</div>
-                <div class="key white he"      >;</div>
-                <div class="key white hf"      >'</div>
+            <div id="keycontainer">
+                <div id="notes">
+                    <div class="key white c"      >A</div>
+                    <div class="key black c_sharp">W</div>
+                    <div class="key white d"      >S</div>
+                    <div class="key black d_sharp">E</div>
+                    <div class="key white e"      >D</div>
+                    <div class="key white f"      >F</div>
+                    <div class="key black f_sharp">T</div>
+                    <div class="key white g"      >G</div>
+                    <div class="key black g_sharp">Y</div>
+                    <div class="key white a"      >H</div>
+                    <div class="key black a_sharp">U</div>
+                    <div class="key white b"      >J</div>
+                    <div class="key white hc"      >K</div>
+                    <div class="key black hc_sharp">O</div>
+                    <div class="key white hd"      >L</div>
+                    <div class="key black hd_sharp">P</div>
+                    <div class="key white he"      >;</div>
+                    <div class="key white hf"      >'</div>
+                </div>
             </div>
-        </div>
 
-        <div class="audiocontainer">
-            <div class = "audiohold" onClick="togglePlay()">
-                <div class="play1">&#9658</div>
-                <div class="pause1 gone">&#x23f8;</div>
+            <div class="audiocontainer">
+                <div class = "audiohold" onClick="togglePlay()">
+                    <div class="play1">&#9658</div>
+                    <div class="pause1 gone">&#x23f8;</div>
+                </div>
+                <div class = "audiohold" onClick = "secondPlay()">
+                    <div class="play2">&#9658</div>
+                    <div class="pause2 gone">&#x23f8;</div>
+                </div>
+                <div class = "audiohold" onClick = "thirdPlay()">
+                    <div class="play3">&#9658</div>
+                    <div class="pause3 gone">&#x23f8;</div>
+                </div>
+                <div class = "audiohold" onClick = "fourthPlay()">
+                    <div class="play4">&#9658</div>
+                    <div class="pause4 gone">&#x23f8;</div>
+                </div>
             </div>
-            <div class = "audiohold" onClick = "secondPlay()">
-                <div class="play2">&#9658</div>
-                <div class="pause2 gone">&#x23f8;</div>
-            </div>
-            <div class = "audiohold">
-                <div class="play3">&#9658</div>
-                <div class="pause3 gone">&#x23f8;</div>
-            </div>
-            <div class = "audiohold">
-                <div class="play4">&#9658</div>
-                <div class="pause4 gone">&#x23f8;</div>
-            </div>
-        </div>
 
 
-        <div class="gone">
-            <audio
-                src = "lofi-drumbeat_80bpm.mp3" id="myAudio" loop
-            ></audio>
-            <audio loop id="audioTwo">
-                <source src = "hiphopbeat1.mp3">
-            </audio>
+            <div id="back1" class="bvinyl">
+                <img src="vecteezy_vinyl-record-vector-illustration-isolated-on-white-background_9314135.png" >
+            </div>
+            <div  id="back2" class="bvinyl"> 
+                <img src="vecteezy_vinyl-record-vector-illustration-isolated-on-white-background_9314135.png">
+            </div>
+
+            <div>
+                <audio loop id="audioOne">
+                    <source src = "lofi-drumbeat_80bpm.mp3" >
+                </audio>
+                <audio loop id="audioTwo">
+                    <source src = "hiphopbeat1.mp3">
+                </audio>
+                <audio loop id="audioThree">
+                    <source src = "shaker-loops_128bpm.mp3">
+                </audio>
+                <audio loop id="audioFour">
+                    <source src = "shimmering-energetic-indie-rock-drums-loop_140bpm_A_minor.mp3">
+                </audio>
+            </div>
         </div>
 
         <script src="audiokeys.min.js"></script>

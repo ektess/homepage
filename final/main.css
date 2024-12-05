@@ -4,6 +4,9 @@
     font-size: 105%;
     max-height: 100vh;
     user-select:none;
+    z-index:1;
+    overflow:hidden;
+    margin:0;
   } 
 
 img{
@@ -11,16 +14,15 @@ img{
 }
 
 body{
-    background:#F5E645;
+    background:#6DD3CE;
 }
 
 .landing{
     position:fixed;
     height:100%;
     width:100%;
-    background:#F5E645;
+    background:#6DD3CE;
     z-index:2;
-    border-radius: 50px;
     opacity:1;
     transition:opacity .25s;
     margin: 0;
@@ -31,7 +33,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #ED357C;
+    background: #F66451;
     position:absolute;
     top: 50%;
     left: 50%;
@@ -40,10 +42,12 @@ body{
     width: 50vh;
     border-radius: 50%;
     z-index:2;
+    gap:10px;
 
     color:#F0F0F0;
     text-align: center;
     padding:30px;
+    font-size:100%;
 }
 
 #vinyl1{
@@ -55,9 +59,8 @@ body{
 }
 
 
-
 .enterbutton{
-    background:#2B2D42;
+    background:#4F2C33;
     border-radius: 15px;
     padding: 30px 40px;
     transition: background .25s;
@@ -65,11 +68,11 @@ body{
 }
 
 h1{
-    font-size:200%;
+    font-size:175%;
 }
 
 .enterbutton:hover{
-    background:#0C081B;
+    background:#27131B;
 }
 
 .fade{
@@ -81,7 +84,7 @@ h1{
 }
 
 #keycontainer{
-    background:#F7F7F9;
+    background:#E3FEC2;
     width: 85vw;
     height: 50vh;
     padding: 1%;
@@ -109,24 +112,23 @@ h1{
 }
 
 .white{
-    background:#E86A92;
-    color:black;
+    background:#F89070;
+    color:#2B2D42;
     margin: 0px 7px;
     border-radius: 6px;
     justify-content: center;
     padding-top:14%;
     transition: background .25s;
-    color:#2B2D42;
 }
 
 .white:hover{
-    background: #D34C77;
-    color: #D34C77;
+    background: #F66451;
+    color: #F66451;
 }
 
 .wpressed{
-    background: #fccaca;
-    color: #fccaca;   
+    background: #F66451;
+    color: #F66451; 
 }
 
 .black {
@@ -135,20 +137,21 @@ h1{
     position: relative;
     height: 67%;
     border-radius:6px;
-    background-color: #2B2D42;
-    color: white;
+    background-color: #4F2C33;
+    color: #F6FEEC;
     margin: 0 -4%;
     transition: background .25s;
+    z-index:2;
 }
 
 .black:hover{
-    background:#0C081B;
-    color: #0C081B;
+    background:#27131B;
+    color: #27131B;
 }
 
 .bpressed{
-    background:#0C081B;
-    color: #0C081B;
+    background:#27131B;
+    color: #27131B;
 }
 
 .audiocontainer{
@@ -164,7 +167,7 @@ h1{
 .audiohold{
     height:100%;
     width: 100px;
-    background-color: #E86A92;
+    background-color: #B53C40;
     display:flex;
     justify-content: space-evenly;
     align-items: center;
@@ -175,5 +178,31 @@ h1{
 }
 
 .audiohold:hover{
-    background:#D34C77;
+    background:#8A2D31;
+}
+
+
+#back1{
+    position:fixed;
+    bottom:-50%;
+    left:-25%;
+    transform:translate(-50%,50%);
+    z-index:0;
+}
+
+#back2{
+    position:fixed;
+    top:-50%;
+    right:-25%;
+    z-index:0;
+}
+
+.bvinyl{
+    animation:spin 5s linear infinite forwards;
+}
+
+@keyframes spin {
+    0%      {transform: rotate(0deg);}
+    50%     {transform: rotate(180deg);}
+    100%    {transform: rotate(360deg);}
 }

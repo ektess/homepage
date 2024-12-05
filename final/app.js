@@ -9,39 +9,80 @@ $(".enterbutton").click(function(){
 );
 
 
-const synth = new Tone.Synth().toDestination();
+const polySynth = new Tone.PolySynth().toDestination();
 
 const keyboard = new AudioKeys();
 
-keyboard.down((key)=>{
-    console.log(key)
-    synth.triggerAttackRelease(key.frequency, "8n");
-})
+let activeNotes = {};
+
+keyboard.down((key) => {
+    console.log(key);
+    if (!activeNotes[key.note]) {
+        activeNotes[key.note] = true;
+        polySynth.triggerAttack(key.frequency);  // This will handle multiple notes at once
+    }
+});
+
+keyboard.up((key) => {
+    if (activeNotes[key.note]) {
+        polySynth.triggerRelease(key.frequency);  // Release note when key is released
+        delete activeNotes[key.note];  // Clean up tracking
+    }
+});
 
 
-function playNote(note) {
-    console.log(note);
-    synth.triggerAttackRelease(note, "8n");
+const clickNotes = new Tone.PolySynth().toDestination();
+
+// A helper function to trigger attack and release when user interacts with the key
+function playNoteOn(note) {
+    console.log("Note on:", note);
+    clickNotes.triggerAttack(note);  // Trigger attack when the key is pressed
 }
 
-document.querySelector(".c").addEventListener('click', () => playNote("C4"));
-document.querySelector(".c_sharp").addEventListener('click', () => playNote("C#4"));
-document.querySelector(".d").addEventListener('click', () => playNote("D4"));
-document.querySelector(".d_sharp").addEventListener('click', () => playNote("D#4"));
-document.querySelector(".e").addEventListener('click', () => playNote("E4"));
-document.querySelector(".f").addEventListener('click', () => playNote("F4"));
-document.querySelector(".f_sharp").addEventListener('click', () => playNote("F#4"));
-document.querySelector(".g").addEventListener('click', () => playNote("G4"));
-document.querySelector(".g_sharp").addEventListener('click', () => playNote("G#4"));
-document.querySelector(".a").addEventListener('click', () => playNote("A4"));
-document.querySelector(".a_sharp").addEventListener('click', () => playNote("A#4"));
-document.querySelector(".b").addEventListener('click', () => playNote("B4"));
-document.querySelector(".hc").addEventListener('click', () => playNote("C5"));
-document.querySelector(".hc_sharp").addEventListener('click', () => playNote("C#5"));
-document.querySelector(".hd").addEventListener('click', () => playNote("D5"));
-document.querySelector(".hd_sharp").addEventListener('click', () => playNote("D#5"));
-document.querySelector(".he").addEventListener('click', () => playNote("E5"));
-document.querySelector(".hf").addEventListener('click', () => playNote("F5"));
+function stopNoteOff(note) {
+    console.log("Note off:", note);
+    clickNotes.triggerRelease(note);  // Trigger release when the key is released
+}
+
+//start note on click
+document.querySelector(".c").addEventListener('mousedown', () => playNoteOn("C4"));
+document.querySelector(".c_sharp").addEventListener('mousedown', () => playNoteOn("C#4"));
+document.querySelector(".d").addEventListener('mousedown', () => playNoteOn("D4"));
+document.querySelector(".d_sharp").addEventListener('mousedown', () => playNoteOn("D#4"));
+document.querySelector(".e").addEventListener('mousedown', () => playNoteOn("E4"));
+document.querySelector(".f").addEventListener('mousedown', () => playNoteOn("F4"));
+document.querySelector(".f_sharp").addEventListener('mousedown', () => playNoteOn("F#4"));
+document.querySelector(".g").addEventListener('mousedown', () => playNoteOn("G4"));
+document.querySelector(".g_sharp").addEventListener('mousedown', () => playNoteOn("G#4"));
+document.querySelector(".a").addEventListener('mousedown', () => playNoteOn("A4"));
+document.querySelector(".a_sharp").addEventListener('mousedown', () => playNoteOn("A#4"));
+document.querySelector(".b").addEventListener('mousedown', () => playNoteOn("B4"));
+document.querySelector(".hc").addEventListener('mousedown', () => playNoteOn("C5"));
+document.querySelector(".hc_sharp").addEventListener('mousedown', () => playNoteOn("C#5"));
+document.querySelector(".hd").addEventListener('mousedown', () => playNoteOn("D5"));
+document.querySelector(".hd_sharp").addEventListener('mousedown', () => playNoteOn("D#5"));
+document.querySelector(".he").addEventListener('mousedown', () => playNoteOn("E5"));
+document.querySelector(".hf").addEventListener('mousedown', () => playNoteOn("F5"));
+
+// end note on release
+document.querySelector(".c").addEventListener('mouseup', () => stopNoteOff("C4"));
+document.querySelector(".c_sharp").addEventListener('mouseup', () => stopNoteOff("C#4"));
+document.querySelector(".d").addEventListener('mouseup', () => stopNoteOff("D4"));
+document.querySelector(".d_sharp").addEventListener('mouseup', () => stopNoteOff("D#4"));
+document.querySelector(".e").addEventListener('mouseup', () => stopNoteOff("E4"));
+document.querySelector(".f").addEventListener('mouseup', () => stopNoteOff("F4"));
+document.querySelector(".f_sharp").addEventListener('mouseup', () => stopNoteOff("F#4"));
+document.querySelector(".g").addEventListener('mouseup', () => stopNoteOff("G4"));
+document.querySelector(".g_sharp").addEventListener('mouseup', () => stopNoteOff("G#4"));
+document.querySelector(".a").addEventListener('mouseup', () => stopNoteOff("A4"));
+document.querySelector(".a_sharp").addEventListener('mouseup', () => stopNoteOff("A#4"));
+document.querySelector(".b").addEventListener('mouseup', () => stopNoteOff("B4"));
+document.querySelector(".hc").addEventListener('mouseup', () => stopNoteOff("C5"));
+document.querySelector(".hc_sharp").addEventListener('mouseup', () => stopNoteOff("C#5"));
+document.querySelector(".hd").addEventListener('mouseup', () => stopNoteOff("D5"));
+document.querySelector(".hd_sharp").addEventListener('mouseup', () => stopNoteOff("D#5"));
+document.querySelector(".he").addEventListener('mouseup', () => stopNoteOff("E5"));
+document.querySelector(".hf").addEventListener('mouseup', () => stopNoteOff("F5"));
 
 
 
@@ -91,12 +132,12 @@ const keyMap = {
   document.addEventListener('keydown', handleKeyPress);
   document.addEventListener('keyup', handleKeyRelease);
 
-var myAudio = document.getElementById("myAudio");
+var audioOne = document.getElementById("audioOne");
 
 function togglePlay() {
   $(".play1").toggleClass("gone");
   $(".pause1").toggleClass("gone");
-  return myAudio.paused ? myAudio.play() : myAudio.pause();
+  return audioOne.paused ? audioOne.play() : audioOne.pause();
 };
 
 var audioTwo = document.getElementById("audioTwo");
@@ -104,7 +145,24 @@ var audioTwo = document.getElementById("audioTwo");
 function secondPlay() {
   $(".play2").toggleClass("gone");
   $(".pause2").toggleClass("gone");
-  return myAudio.paused ? myAudio.play() : myAudio.pause();
+  return audioTwo.paused ? audioTwo.play() : audioTwo.pause();
 };
+
+var audioThree = document.getElementById("audioThree");
+
+function thirdPlay() {
+  $(".play3").toggleClass("gone");
+  $(".pause3").toggleClass("gone");
+  return audioThree.paused ? audioThree.play() : audioThree.pause();
+};
+
+var audioFour = document.getElementById("audioFour");
+
+function fourthPlay() {
+  $(".play4").toggleClass("gone");
+  $(".pause4").toggleClass("gone");
+  return audioFour.paused ? audioFour.play() : audioFour.pause();
+};
+
 
 
