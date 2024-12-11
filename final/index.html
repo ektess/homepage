@@ -7,54 +7,106 @@
         <link rel="icon" type="image/x-icon" href="pianoicon.png">
     </head>
     <body>
-        <div class="background">
-            <div class="landing">
-                <div class="smallland">
-                    <h1>Keyboard Piano</h1>
-                    <p>Click on the keys or use your computer keyboard to play the piano!</p>
-                    <div class="enterbutton"> Enter</div>
-                </div>
-                <img src="vecteezy_vinyl-record-vector-illustration-isolated-on-white-background_9314135.png" id="vinyl1">
+        <div class="landing">
+            <div class="smallland">
+                <h1>Keyboard Piano</h1>
+                <p>Click on the keys or use your computer keyboard to play the piano!</p>
+                <div class="enterbutton"> Enter</div>
             </div>
+            <img src="vecteezy_vinyl-record-vector-illustration-isolated-on-white-background_9314135.png" id="vinyl1">
+        </div>
+
+        <div class="huh"><span class="wuh">?</span></div>
+        <div class="explain gone">
+            <div class="x-btn"><span>&#x2715;</span></div>
+            <div class="ex-text">
+                <h1>How to Use:</h1>
+                <br>
+                <p> Press the letter keys on your keyboard, or click on the piano keys onscreen to play notes on the piano.</p>
+                <br>
+                <p> Click any of the buttons in the bottom left to turn on a backing track.</p>
+                <br>
+                <p style="font-style: italic; font-size:80%;"> (Tip: Press the X and Z keys to raise or lower the octave.)</p>
+                <br>
+                <br>
+                <br>
+                <p style="font-size:80%;"> Made using <a href="https://tonejs.github.io/" target="_blank">Tone.js</a> and <a href="https://github.com/kylestetz/AudioKeys" target="_blank">AudioKeys</a></p>
+            </div>
+        </div>
+
+
+        <div class="background">
             <div id="keycontainer">
                 <div id="notes">
-                    <div class="key white c"      >A</div>
+                    <div class="key white c"><span>A</span></div>
                     <div class="key black c_sharp">W</div>
-                    <div class="key white d"      >S</div>
+                    <div class="key white d"><span>S</span></div>
                     <div class="key black d_sharp">E</div>
-                    <div class="key white e"      >D</div>
-                    <div class="key white f"      >F</div>
+                    <div class="key white e"><span>D</span></div>
+                    <div class="key white f"><span>F</span></div>
                     <div class="key black f_sharp">T</div>
-                    <div class="key white g"      >G</div>
+                    <div class="key white g"><span>G</span></div>
                     <div class="key black g_sharp">Y</div>
-                    <div class="key white a"      >H</div>
+                    <div class="key white a"><span>H</span></div>
                     <div class="key black a_sharp">U</div>
-                    <div class="key white b"      >J</div>
-                    <div class="key white hc"      >K</div>
+                    <div class="key white b"><span>J</span></div>
+                    <div class="key white hc"><span>K</span></div>
                     <div class="key black hc_sharp">O</div>
-                    <div class="key white hd"      >L</div>
+                    <div class="key white hd"><span>L</span></div>
                     <div class="key black hd_sharp">P</div>
-                    <div class="key white he"      >;</div>
-                    <div class="key white hf"      >'</div>
+                    <div class="key white he"><span>;</span></div>
+                    <div class="key white hf" ><span>'</span></div>
                 </div>
             </div>
 
-            <div class="audiocontainer">
-                <div class = "audiohold" onClick="togglePlay()">
-                    <div class="play1">&#9658</div>
-                    <div class="pause1 gone">&#x23f8;</div>
+            <div class="bottomcontainer">
+                <div class="audiocontainer">
+                    <p class="bt" style="font-weight: bold;">Try out these backing tracks!</p>
+                    <div class="audtop">
+                        <div class = "audiohold" onClick="togglePlay()">
+                            <div class="play1">&#9658</div>
+                            <div class="pause1 gone">&#x23f8;</div>
+                        </div>
+                        <div class = "audiohold" onClick = "secondPlay()">
+                            <div class="play2">&#9658</div>
+                            <div class="pause2 gone">&#x23f8;</div>
+                        </div>
+                    </div>
+
+                    <div class = "audbottom">
+                        <div class = "audiohold" onClick = "thirdPlay()">
+                            <div class="play3">&#9658</div>
+                            <div class="pause3 gone">&#x23f8;</div>
+                        </div>
+                        <div class = "audiohold" onClick = "fourthPlay()">
+                            <div class="play4">&#9658</div>
+                            <div class="pause4 gone">&#x23f8;</div>
+                        </div>
+                    </div>
                 </div>
-                <div class = "audiohold" onClick = "secondPlay()">
-                    <div class="play2">&#9658</div>
-                    <div class="pause2 gone">&#x23f8;</div>
-                </div>
-                <div class = "audiohold" onClick = "thirdPlay()">
-                    <div class="play3">&#9658</div>
-                    <div class="pause3 gone">&#x23f8;</div>
-                </div>
-                <div class = "audiohold" onClick = "fourthPlay()">
-                    <div class="play4">&#9658</div>
-                    <div class="pause4 gone">&#x23f8;</div>
+
+                <div class="songs">
+                    <h2>Here are some songs to try!</h2>
+                    <br>
+                    <p>
+                        <span class=songname>Twinkle, Twinkle, Little Star:</span>
+                        AAGGHHG FFDDSSA</p>
+                    <p> 
+                        <span class="songname">Für Elise:</span> 
+                        ;P;P; JLKH ADHJ DYJK</p>
+                    <p> 
+                        <span class="songname"> Take Me Out to the Ball Game</span>
+                        AKHGDGS AKHGDG
+                    </p>
+                    <p> 
+                        <span class="songname"> Rudolph the Red Nosed Reindeer</span>
+                        GHGDKHG GHGHGKJ
+                    </p>
+                    <p> 
+                        <span class="songname"> Ode to Joy</span>
+                        DDFGGFDSAASDDSS
+                    </p>
+
                 </div>
             </div>
 

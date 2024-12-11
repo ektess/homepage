@@ -9,6 +9,16 @@ $(".enterbutton").click(function(){
 );
 
 
+$(".huh").click(function(){
+    $(".explain").removeClass("gone");
+    $(".huh").addClass("gone");
+})
+
+$(".x-btn").click(function(){
+  $(".explain").addClass("gone");
+  $(".huh").removeClass("gone");
+})
+
 const polySynth = new Tone.PolySynth().toDestination();
 
 const keyboard = new AudioKeys();
@@ -163,6 +173,5 @@ function fourthPlay() {
   $(".pause4").toggleClass("gone");
   return audioFour.paused ? audioFour.play() : audioFour.pause();
 };
-
 
 
